@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://BenBonk Sprites/bulky-pixels/bulkypixels/BULKYPIX.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://BenBonk Sprites/ButtonTile.png" type="Texture" id=2]
+[ext_resource path="res://Narrator.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 2
+outline_color = Color( 0.886275, 0.470588, 0.168627, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 39
+outline_size = 2
+outline_color = Color( 0.129412, 0.623529, 0.0588235, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 29
+outline_size = 2
+outline_color = Color( 0.909804, 0.0941176, 0.0941176, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Narrator" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Margin" type="MarginContainer" parent="."]
+margin_left = 9.0
+margin_top = 420.0
+margin_right = 1048.0
+margin_bottom = 624.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Margin"]
+margin_right = 1039.0
+margin_bottom = 204.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 48, 48 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+margin_right = 1039.0
+margin_bottom = 204.0
+
+[node name="Explanation" type="Label" parent="Margin/VBox"]
+margin_top = 41.0
+margin_right = 1039.0
+margin_bottom = 58.0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 1 )
+align = 1
+
+[node name="HBox" type="HBoxContainer" parent="Margin/VBox"]
+margin_top = 104.0
+margin_right = 1039.0
+margin_bottom = 204.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer2" type="CenterContainer" parent="Margin/VBox/HBox"]
+margin_right = 191.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="Trust" type="Button" parent="Margin/VBox/HBox"]
+margin_left = 195.0
+margin_right = 386.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "Trust"
+
+[node name="CenterContainer3" type="CenterContainer" parent="Margin/VBox/HBox"]
+margin_left = 390.0
+margin_right = 581.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Don\'t_Trust" type="Button" parent="Margin/VBox/HBox"]
+margin_left = 585.0
+margin_right = 844.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "Don't Trust"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Margin/VBox/HBox"]
+margin_left = 848.0
+margin_right = 1039.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+[connection signal="pressed" from="Margin/VBox/HBox/Trust" to="." method="_on_Trust_pressed"]
+[connection signal="pressed" from="Margin/VBox/HBox/Don't_Trust" to="." method="_on_Dont_Trust_pressed"]

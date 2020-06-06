@@ -1,0 +1,322 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Camera.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 186.807, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 166.758, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 18.4174, 146.813 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 82.2216, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 258.631, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 12.8171, 172.803 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 103.392, 10 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 492.011, 2.50098 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 6.03223, 197.511 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 13.8693, 177.078 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 11.1873, 127.649 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 321.882, 2.43958 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 6.24561, 245.861 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 18.8174, 229.17 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 230.85, 16.7144 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 203.645, 10 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 18.4941, 224.666 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 5.55225, 187.433 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 242.015, 10 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 294.932, 10 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 10.8374, 235.549 )
+
+[node name="Camera" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Frame1" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="ToBad1" type="Area2D" parent="Frame1"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame1/ToBad1"]
+position = Vector2( 503.506, 625.408 )
+shape = SubResource( 1 )
+
+[node name="ToGood1" type="Area2D" parent="Frame1"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame1/ToGood1"]
+position = Vector2( 575.622, -28.944 )
+shape = SubResource( 2 )
+
+[node name="Good1" type="Camera2D" parent="."]
+position = Vector2( 0, -624 )
+anchor_mode = 0
+
+[node name="ToGood2" type="Area2D" parent="Good1"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Good1/ToGood2"]
+position = Vector2( 1054.83, 236.31 )
+shape = SubResource( 3 )
+
+[node name="Good2" type="Camera2D" parent="."]
+position = Vector2( 1056, -624 )
+anchor_mode = 0
+
+[node name="ToGood3" type="Area2D" parent="Good2"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Good2/ToGood3"]
+position = Vector2( 250.594, -66.7809 )
+shape = SubResource( 4 )
+
+[node name="ToSecret1" type="Area2D" parent="Good2"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Good2/ToSecret1"]
+position = Vector2( 487.023, 627.125 )
+shape = SubResource( 5 )
+
+[node name="Good3" type="Camera2D" parent="."]
+position = Vector2( 1056, -1248 )
+anchor_mode = 0
+
+[node name="ToGood4" type="Area2D" parent="Good3"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Good3/ToGood4"]
+position = Vector2( 0, 235.276 )
+shape = SubResource( 6 )
+
+[node name="Good4" type="Camera2D" parent="."]
+position = Vector2( 0, -1248 )
+anchor_mode = 0
+
+[node name="ToGood5" type="Area2D" parent="Good4"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Good4/ToGood5"]
+position = Vector2( 277.552, -75.2904 )
+shape = SubResource( 7 )
+
+[node name="Good5" type="Camera2D" parent="."]
+position = Vector2( 0, -1872 )
+anchor_mode = 0
+
+[node name="ToGood6" type="Area2D" parent="Good5"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Good5/ToGood6"]
+position = Vector2( 514.228, -36.9104 )
+shape = SubResource( 8 )
+
+[node name="ToSecret6" type="Area2D" parent="."]
+position = Vector2( 3168, 1248 )
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToSecret6"]
+position = Vector2( 1054.2, 494.495 )
+shape = SubResource( 9 )
+
+[node name="Good6" type="Camera2D" parent="."]
+position = Vector2( 0, -2496 )
+anchor_mode = 0
+
+[node name="ToGoodEnd" type="Area2D" parent="Good6"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Good6/ToGoodEnd"]
+position = Vector2( 1054.95, 227.687 )
+shape = SubResource( 10 )
+
+[node name="GoodEnd" type="Camera2D" parent="."]
+position = Vector2( 1056, -2496 )
+anchor_mode = 0
+
+[node name="Bad1" type="Camera2D" parent="."]
+position = Vector2( 0, 624 )
+anchor_mode = 0
+
+[node name="ToBad2" type="Area2D" parent="Bad1"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bad1/ToBad2"]
+position = Vector2( 1053.99, 482.778 )
+shape = SubResource( 11 )
+
+[node name="Bad2" type="Camera2D" parent="."]
+position = Vector2( 1056, 624 )
+anchor_mode = 0
+
+[node name="ToBad3" type="Area2D" parent="Bad2"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bad2/ToBad3"]
+position = Vector2( 478.385, 711.895 )
+shape = SubResource( 12 )
+
+[node name="ToSecret3-2" type="Area2D" parent="Bad2"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bad2/ToSecret3-2"]
+position = Vector2( 1057.59, 307.493 )
+shape = SubResource( 13 )
+
+[node name="Bad3" type="Camera2D" parent="."]
+position = Vector2( 1056, 1248 )
+anchor_mode = 0
+
+[node name="ToBad4" type="Area2D" parent="Bad3"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bad3/ToBad4"]
+position = Vector2( -4.9043, 308.964 )
+shape = SubResource( 14 )
+
+[node name="Bad4" type="Camera2D" parent="."]
+position = Vector2( 0, 1248 )
+anchor_mode = 0
+
+[node name="ToBad5" type="Area2D" parent="Bad4"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bad4/ToBad5"]
+position = Vector2( 353.51, 643.091 )
+shape = SubResource( 15 )
+
+[node name="Bad5" type="Camera2D" parent="."]
+position = Vector2( 0, 1872 )
+anchor_mode = 0
+
+[node name="ToBad6" type="Area2D" parent="Bad5"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bad5/ToBad6"]
+position = Vector2( 850.03, 629.933 )
+shape = SubResource( 16 )
+
+[node name="Bad6" type="Camera2D" parent="."]
+position = Vector2( 0, 2496 )
+anchor_mode = 0
+
+[node name="ToBadEnd" type="Area2D" parent="Bad6"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bad6/ToBadEnd"]
+position = Vector2( 1058.27, 361.362 )
+shape = SubResource( 17 )
+
+[node name="BadEnd" type="Camera2D" parent="."]
+position = Vector2( 1056, 2496 )
+anchor_mode = 0
+
+[node name="Secret1" type="Camera2D" parent="."]
+position = Vector2( 1056, 0 )
+anchor_mode = 0
+
+[node name="ToSecret2" type="Area2D" parent="Secret1"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Secret1/ToSecret2"]
+position = Vector2( 1055.76, 368.278 )
+shape = SubResource( 18 )
+
+[node name="Secret2" type="Camera2D" parent="."]
+position = Vector2( 2112, 0 )
+anchor_mode = 0
+
+[node name="ToSecret3" type="Area2D" parent="Secret2"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Secret2/ToSecret3"]
+position = Vector2( 497.495, 623.671 )
+shape = SubResource( 19 )
+
+[node name="Secret3" type="Camera2D" parent="."]
+position = Vector2( 2112, 624 )
+anchor_mode = 0
+
+[node name="ToSecret4" type="Area2D" parent="Secret3"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Secret3/ToSecret4"]
+position = Vector2( 516.231, 624.912 )
+shape = SubResource( 20 )
+
+[node name="Secret4" type="Camera2D" parent="."]
+position = Vector2( 2112, 1248 )
+anchor_mode = 0
+
+[node name="ToSecret5" type="Area2D" parent="Secret4"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Secret4/ToSecret5"]
+position = Vector2( 1048.76, 364.079 )
+shape = SubResource( 21 )
+
+[node name="Secret5" type="Camera2D" parent="."]
+position = Vector2( 3168, 1248 )
+anchor_mode = 0
+
+[node name="SecretEnd" type="Camera2D" parent="."]
+position = Vector2( 4224, 1248 )
+anchor_mode = 0
+[connection signal="body_entered" from="Frame1/ToBad1" to="." method="_on_ToBad1_body_entered"]
+[connection signal="body_entered" from="Frame1/ToGood1" to="." method="_on_ToGood1_body_entered"]
+[connection signal="body_entered" from="Good1/ToGood2" to="." method="_on_ToGood2_body_entered"]
+[connection signal="body_entered" from="Good2/ToGood3" to="." method="_on_ToGood3_body_entered"]
+[connection signal="body_entered" from="Good2/ToSecret1" to="." method="_on_ToSecret1_body_entered"]
+[connection signal="body_entered" from="Good3/ToGood4" to="." method="_on_ToGood4_body_entered"]
+[connection signal="body_entered" from="Good4/ToGood5" to="." method="_on_ToGood5_body_entered"]
+[connection signal="body_entered" from="Good5/ToGood6" to="." method="_on_ToGood6_body_entered"]
+[connection signal="body_entered" from="ToSecret6" to="." method="_on_ToSecret6_body_entered"]
+[connection signal="body_entered" from="Good6/ToGoodEnd" to="." method="_on_ToGoodEnd_body_entered"]
+[connection signal="body_entered" from="Bad1/ToBad2" to="." method="_on_ToBad2_body_entered"]
+[connection signal="body_entered" from="Bad2/ToBad3" to="." method="_on_ToBad3_body_entered"]
+[connection signal="body_entered" from="Bad2/ToSecret3-2" to="." method="_on_ToSecret32_body_entered"]
+[connection signal="body_entered" from="Bad3/ToBad4" to="." method="_on_ToBad4_body_entered"]
+[connection signal="body_entered" from="Bad4/ToBad5" to="." method="_on_ToBad5_body_entered"]
+[connection signal="body_entered" from="Bad5/ToBad6" to="." method="_on_ToBad6_body_entered"]
+[connection signal="body_entered" from="Bad6/ToBadEnd" to="." method="_on_ToBadEnd_body_entered"]
+[connection signal="body_entered" from="Secret1/ToSecret2" to="." method="_on_ToSecret2_body_entered"]
+[connection signal="body_entered" from="Secret2/ToSecret3" to="." method="_on_ToSecret3_body_entered"]
+[connection signal="body_entered" from="Secret3/ToSecret4" to="." method="_on_ToSecret4_body_entered"]
+[connection signal="body_entered" from="Secret4/ToSecret5" to="." method="_on_ToSecret5_body_entered"]
